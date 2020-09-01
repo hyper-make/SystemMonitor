@@ -319,7 +319,7 @@ long LinuxParser::UpTime(int pid) {
     for (int i=0; i < 22; i++) {
       linestream >> temp;
     }
-    long output std::stol(temp) / sysconf(_SC_CLK_TCK);
+    long output = std::stol(temp) / sysconf(_SC_CLK_TCK);
   }
   return output;
 }
