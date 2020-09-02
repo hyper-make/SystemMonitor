@@ -12,9 +12,9 @@ string Format::ElapsedTime(long seconds) {
   int hours, minutes;
   std::string fhours, fminutes, fseconds;
   std::string time;
-  minutes = (int) ((seconds - (seconds %  60)) / 60);
+  minutes = seconds / 60;
   seconds -= minutes * 60;
-  hours = ((minutes - (minutes %  60)) / 60);
+  hours = minutes / 60;
   minutes -= hours * 60;
   
   if (seconds < 10){fseconds = "0" + std::to_string(seconds);}
